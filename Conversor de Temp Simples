@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<style>
+body {
+  font-family: "Courier New", Courier, monospace;
+  min-height: 400px;
+  background-image: url("https://img.freepik.com/premium-vector/sun-summer_134553-49.jpg?w=2000");
+  background-color: #000000;
+  background-size: 100vh;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+input {
+  margin: 20px;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+label {
+  color: white;
+}
+
+button {
+  margin-top: 12px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+h2 {
+  color: #808080;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+</style>
+<script>
+function ConverterK() {
+  var elemente = document.getElementById("valor");
+  var valor = elemente.value;
+  var valornum = parseFloat(valor);
+  var kelvin = valornum + 273.15;
+  var kelvinFixed = kelvin.toFixed(2);
+  var elementValorConvertido = document.getElementById("valorConvertido");
+  var valorConvertido = "Valor em Kelvin = " + kelvinFixed + " K";
+  elementValorConvertido.innerHTML = valorConvertido;
+}
+function ConverterF() {
+  var elemente = document.getElementById("valor");
+  var valor = elemente.value;
+  var valornum = parseFloat(valor);
+  var fahrenheit = valornum * (9 / 5) + 32;
+  var elementValorConvertido = document.getElementById("valorConvertido");
+  var fahrenheitFixed = fahrenheit.toFixed(2);
+  var valorConvertido = "Valor em Fahrenheit = " + fahrenheitFixed + " ºF";
+  elementValorConvertido.innerHTML = valorConvertido;
+}
+function ConverterCF() {
+  var elemente = document.getElementById("valor");
+  var valor = elemente.value;
+  var valornum = parseFloat(valor);
+  var celcius = ((valornum - 32) * 5) / 9;
+  var elementValorConvertido = document.getElementById("valorConvertido");
+  var celciusFixed = celcius.toFixed(2);
+  var valorConvertido = "Valor em Celcius = " + celciusFixed + " ºC";
+  elementValorConvertido.innerHTML = valorConvertido;
+}
+function ConverterKC() {
+  var elemente = document.getElementById("valor");
+  var valor = elemente.value;
+  var valornum = parseFloat(valor);
+  var celcius = valornum - 273.15;
+  var elementValorConvertido = document.getElementById("valorConvertido");
+  var celciusFixed = celcius.toFixed(2);
+  var valorConvertido = "Valor em Celcius = " + celciusFixed + " ºC";
+  elementValorConvertido.innerHTML = valorConvertido;
+}
+
+</script>
+<html>
+<div class="container">
+  <a href="https://c.tenor.com/Cy4z6MdBBKAAAAAC/term%C3%B4metro-t%C3%A1esquentando.gif">
+    <h1 class="page-title">Conversor de Temperaturas</h1>
+  </a>
+  <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
+  <label for="moeda">Insira o valor</label><br>
+  <input type="number" id="valor" size="2" /><br>
+  <button type="submit" onclick="ConverterK()">Converter de Celcius para Kelvin</button><br>
+  <button type="submit" onclick="ConverterF()">Converter de Celcius para Fahrenheit</button><br>
+  <button type="submit" onclick="ConverterCF()">Converter de Fahrenheit para Celcius</button><br>
+  <button type="submit" onclick="ConverterKC()">Converter de Kelvin para Celcius</button><br>
+  <h2 id="valorConvertido"></h2>
+</div>
+<a href="https://alura.com.br/" target="_blank">
+  <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+</html>
