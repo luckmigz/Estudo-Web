@@ -1,19 +1,16 @@
-import Logo from '../Logo';
-import OpcoesHeader from '../OpcoesHeader';
-import IconesHeader from '../IconesHeader';
-import styeled from 'styled-components'
+import Logo from '../Logo'
+import OpcoesHeader from '../OpcoesHeader'
+import IconesHeader from '../IconesHeader'
+import styled from 'styled-components'
 
-
-const HeaderContainer = styeled.header`
-    
+const HeaderContainer = styled.header`
     background-color: #282c34;
     display: flex;
-    color: #fff;
     justify-content: center;
 `
 
 function Header() {
-    return(
+    return (
         <HeaderContainer>
             <Logo/>
             <OpcoesHeader/>
