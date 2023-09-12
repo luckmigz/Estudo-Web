@@ -7,6 +7,8 @@ const rotaLivro = require("./rotas/livros.js")
 // Criando uma aplicação express
 const app = express()
 
+app.use(express.json())
+
 app.use('/livros', rotaLivro)
 
 
