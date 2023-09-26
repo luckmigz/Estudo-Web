@@ -65,8 +65,8 @@ function deleteLivro(req,res){
     try {
         const id = req.params.id
         if(id && Number(id)){
-        deletaLivroById(id)
-        res.send("Livro apagado com sucesso!")
+            deletaLivroById(id)
+            res.send("Livro apagado com sucesso!")
         }else{
             res.status(422)
             res.send("Id inválido")

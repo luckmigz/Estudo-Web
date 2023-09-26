@@ -15,6 +15,7 @@ function getLivroById(id){
 function insereLivro(livroNovo) {
     const livros = JSON.parse(fs.readFileSync("livros.json"))
 
+        
     const novaListaDeLivros = [ ...livros, livroNovo ]
 
     fs.writeFileSync("livros.json", JSON.stringify(novaListaDeLivros))
